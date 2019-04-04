@@ -1,0 +1,41 @@
+% arara: pdflatex
+
+%\documentclass{article}
+%\usepackage{pgf-umlsd}
+
+%\begin{document}
+%\begin{figure}
+%  \centering
+%  \begin{sequencediagram}
+%    \newthread{A}{Client}{}
+%    \newinst[1]{B}{Server}{}
+%    \begin{call}{A}{Call()}{B}{}
+%    \end{call}
+%  \end{sequencediagram}
+%\end{figure}
+%\end{document}
+
+
+%\documentclass{article}
+\documentclass[tikz]{standalone}
+%\usepackage{graphicx}
+\usepackage{pgf-umlsd}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{figure}
+%\begin{figure}[htb]
+  \centering
+  \begin{minipage}{\paperwidth}
+    \begin{sequencediagram}
+      \newthread{A}{Client}{}
+      \newinst[1]{B}{Server}{}
+      \begin{call}{A}{Call()}{B}{}
+      \end{call}
+    \end{sequencediagram}
+    %\caption{Some picture}
+  \end{minipage}
+  %\hfill
+  %\medskip
+\end{figure}
+\end{document}

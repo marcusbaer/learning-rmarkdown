@@ -9,6 +9,7 @@
 # '\\begin{document}', 'Hello world!', '\\end{document}'
 #), 'Playground/learning-rstudio/test.tex')
 
-tinytex::pdflatex('Playground/learning-rstudio/TinyTeX/test.tex')
+tinytex::pdflatex('TinyTeX/test.tex')
+
 
 

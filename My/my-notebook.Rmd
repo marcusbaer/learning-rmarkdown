@@ -1,9 +1,41 @@
 ---
 title: "R Notebook"
+author: "Marcus Baer"
+header-includes:
+  - \usepackage{pgf-umlsd}
+  - \usetikzlibrary{calc}
 output:
-  html_notebook: default
   pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
 ---
+\renewcommand{\figurename}{Grafik}
+\renewcommand{\tablename}{Tabelle}
+
+```{r echo=FALSE, include = FALSE}
+
+# https://yihui.name/tinytex/
+
+#install.packages('tinytex')
+#tinytex::install_tinytex()
+
+# writes file relative to home directory
+#writeLines(c(
+# '\\documentclass{article}',
+# '\\begin{document}', 'Hello world!', '\\end{document}'
+#), 'Playground/learning-rstudio/test.tex')
+
+# tinytex::pdflatex('./graphic01.tex')
+# tinytex::pdflatex('./graphic02.tex')
+
+```
+
+Hello from \LaTeX.
+
+![sequence diagram](./graphic02.pdf){ width=80% }
+
+![another sequence diagram](./graphic01.pdf){ width=80% }
 
 ```{r include = FALSE}
 

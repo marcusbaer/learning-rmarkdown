@@ -1,8 +1,10 @@
 ---
 title: "ML Iris Analysis"
 output:
-  pdf_document: default
   html_notebook: default
+  html_document:
+    df_print: paged
+  pdf_document: default
 ---
 
 Klassifizierung der Irisarten anhand von Kelchblatt- und Blütenblattgrößen.
@@ -14,7 +16,7 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r message=FALSE, warning=FALSE}
 library(GGally)
  
-df <- read.csv(file="IrisData.csv", header=TRUE, sep=",")
+df <- read.csv(file="MyIrisData.csv", header=TRUE, sep=",")
 aggregate(df[, 1:4], list(df$Irisart), mean)
  
 ggpairs(df, aes(colour = Irisart, alpha = 0.4))
